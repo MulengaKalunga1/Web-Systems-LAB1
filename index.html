@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Registration</title>
+</head>
+<body>
+  <h1>Course Registration Form</h1>
+
+  <form method="post" action="/register">
+
+    <label for="fullName">Full Name</label><br>
+    <input type="text" id="fullName" name="fullName" required
+           minlength="3" placeholder="e.g. Mulenga Kalunga"><br>
+    <small>Please enter your full name (at least 3 characters).</small><br><br>
+
+    <label for="studentId">Student ID</label><br>
+    <input type="text" id="studentId" name="studentId" required
+           pattern="[0-9]{6,10}" placeholder="e.g. 2023123456"><br>
+    <small>Student ID must be 6–10 digits.</small><br><br>
+
+    <label for="programme">Programme</label><br>
+    <select id="programme" name="programme" required>
+      <option value="">-- Select Programme --</option>
+      <option value="ICT">ICT</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Software Engineering">Software Engineering</option>
+      <option value="Information Systems">Information Systems</option>
+    </select><br><br>
+
+    <label for="course">Course</label><br>
+    <input type="text" id="course" name="course" required
+           placeholder="e.g. Web Systems and Technology"><br><br>
+
+    <button type="submit">Register</button>
+
+  </form>
+</body>
+</html>
